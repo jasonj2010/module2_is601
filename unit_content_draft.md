@@ -8,7 +8,8 @@ VSCode is a powerful, open-source IDE that supports many programming languages a
 
 ### Learning Outcomes
 - CLO 3 Create Python applications with automated testing.
-- CLO 4 Set up GitHub Actions for Continuous Integration (CI), automating the execution of tests and Docker builds to demonstrate DevOps principles to ensure software quality.
+- CLO 4 Set up GitHub Actions for Continuous Integration (CI), automating the execution of tests and Docker builds to demonstrate DevOps principles to ensure software quality
+- CLO 5 Develop a command-line application using the REPL pattern.
 
 ## Module 2 Learning Pathway
 
