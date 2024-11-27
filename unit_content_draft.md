@@ -7,8 +7,8 @@ This module introduces students to integrated development environments (IDEs), s
 VSCode is a powerful, open-source IDE that supports many programming languages and has numerous extensions to enhance development productivity. Python is a versatile programming language widely used in various fields, including web development, data science, and automation. Testing is crucial to ensure code reliability and maintainability, and pytest is a popular testing framework for Python. GitHub Actions allow automated workflows to build, test, and deploy code, integrating continuous integration/continuous deployment (CI/CD) practices.
 
 ### Learning Outcomes
-- CLO 1 Utilize GIT for version control and collaborative development.
-- CLO 2 Create Python applications with automated testing.
+- CLO 3 Create Python applications with automated testing.
+- CLO 4 Set up GitHub Actions for Continuous Integration (CI), automating the execution of tests and Docker builds to demonstrate DevOps principles to ensure software quality.
 
 ## Module 2 Learning Pathway
 
