@@ -1,3 +1,5 @@
+![CI](https://github.com/jasonj2010/module2_is601/actions/workflows/tests.yml/badge.svg)
+
 # 📦 Project Setup
 
 ---
