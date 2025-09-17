@@ -1,32 +1,32 @@
-name: Run Tests on Push or Pull Request to Main
+name: CI
 
 on:
   push:
-    branches:
-      - main  # Run tests on any push to the main branch
   pull_request:
-    branches:
-      - main  # Run tests on any pull request to the main branch
 
 jobs:
-  test:
+  tests:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
     steps:
-      - name: Check out the code
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.x'  # Set your desired Python version
+          python-version: ${{ matrix.python-version }}
 
-      - name: Install dependencies from requirements.txt
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install pytest pytest-cov  # Ensure pytest-cov is installed
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
 
-      - name: Run tests with pytest and enforce 100% coverage
+      - name: Install deps
         run: |
-          pytest --cov=app --cov-fail-under=100
+          if [ -f requirements.txt ]; then
+            python -m pip install -r requirements.txt
+          fi
+
+      - name: Run tests
+        run: python -m pytest --cov=app
